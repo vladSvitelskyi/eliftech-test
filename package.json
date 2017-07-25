@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "angular.min.js",
+  "engines": {
+    "node": "6.11.1"
+  },
   "scripts": {
     "start": "npm install && bower install && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
