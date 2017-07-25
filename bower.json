@@ -1,19 +1,16 @@
 {
   "name": "eliftech-test",
-  "description": "",
-  "main": "",
+  "description": "test task for ElifTech",
+  "main": "gulpfile.js",
   "authors": [
-    "Vladyslav Svitelskyi <Vlad.Svitelckyi@gmail.com>"
+    "Vladyslav Svitelskyi"
   ],
   "license": "ISC",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+  "keywords": [
+    "angularjs"
   ],
+  "homepage": "https://github.com/vladSvitelskyi/eliftech-test",
+  "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
     "bootstrap": "^3.3.7",

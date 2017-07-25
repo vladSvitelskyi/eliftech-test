@@ -1,17 +1,28 @@
 {
   "name": "eliftech-test",
-  "version": "1.0.1",
-  "description": "",
-  "main": "angular.min.js",
-  "engines": {
-    "node": "6.11.1"
-  },
+  "version": "1.0.0",
+  "description": "test task for ElifTech",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "npm install && bower install && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladSvitelskyi/eliftech-test.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "Vladyslav Svitelskyi",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladSvitelskyi/eliftech-test/issues"
+  },
+  "homepage": "https://github.com/vladSvitelskyi/eliftech-test#readme",
+  "engines": {
+    "node": "6.11.1"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
