@@ -1,0 +1,50 @@
+main {
+
+    a {
+        margin-left: 0.5%;
+    }
+
+    input {
+        color: black;
+        padding-left: 0.5%;
+    }
+
+    label {
+        margin-left: 2%;
+    }
+
+    .tree-node {
+        padding: 5px;
+        border: 1px solid #dae2ea;
+        background: #f8faff;
+        color: #7c9eb2;
+    }
+
+    .tree-node-content {
+        margin: 10px;
+    }
+
+    .btn-block {
+        margin: 10px;
+        & button {
+            margin-left: 0.5%;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .add-company-block {
+        margin: 10px;
+        margin-bottom: 20px;
+        padding: 5px;
+        border: 1px solid #dae2ea;
+        background: #f8faff;
+        color: #7c9eb2;
+        & button {
+            margin-left: 2%;
+        }
+        & label:first-child {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElifTech test</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/bower_components.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="./js/bower_components.js"></script>
+    <script src="./js/app.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="mainController">
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Companies Tree</h3>
+                <div class="col-sm-12">
+                    <div class="btn-block">
+                        <button class="btn btn-primary" ng-click="expandAll()">Expand tree</button>
+                        <button class="btn btn-primary" ng-click="collapseAll()">Collapse tree</button>
+                        <button class="btn btn-warning" ng-click="edit()">Edit</button>
+                        <button class="btn btn-success" ng-click="save()" ng-show="editEnabled">Save</button>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="add-company-block">
+                        <label for="name__company_input">Name</label>
+                        <input type="text" placeholder="company name" ng-model="newCompany.name">
+                        <label for="earnings__company_input">Earnings</label>
+                        <input type="text" placeholder="company earnings" ng-model="newCompany.earnings">
+                        <button class="btn btn-success" ng-click="addCompany(newCompany)">Add new company</button>
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div ui-tree id="tree-root">
+                        <ol ui-tree-nodes ng-model="companiesModel">
+                            <li ng-repeat="node in companiesModel" ui-tree-node ng-include="'tree.html'"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Template -->
+    <script type="text/ng-template" id="tree.html">
+        <div class="tree-node tree-node-content">
+            <a class="btn btn-success btn-xs" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+                <span class="glyphicon" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed }">
+                </span>
+            </a>
+            <label for="name_input">Name</label>
+            <input class="" type="text" id="name_input" value="node.name" ng-model="node.name" ng-disabled="!editEnabled">
+            <label for="earnings_total">Earnings</label>
+            <input class="" type="text" id="earnings_total" value="node.earnings" ng-model="node.earnings" ng-disabled="!editEnabled">
+            <label for="total_input" ng-show="node.nodes.length > 0">Total</label>
+            <input class="" type="text" id="total_input" value="node.total" ng-model="node.total" ng-show="node.nodes.length > 0" disabled>             
+            <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="delete(this)">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>                        
+            <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="addSubCompany(this)">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+        </div>
+        <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+            <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'tree.html'">
+            </li>
+        </ol>
+    </script>
+
+</body>
+
+</html>

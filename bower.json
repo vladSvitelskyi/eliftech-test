@@ -1,0 +1,27 @@
+{
+  "name": "eliftech-test",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Vladyslav Svitelskyi <Vlad.Svitelckyi@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.5",
+    "angular-ui-router": "^1.0.5",
+    "angular-ui-tree": "^2.22.5"
+  },
+  "resolutions": {
+    "angular": "^1.6.5"
+  }
+}
