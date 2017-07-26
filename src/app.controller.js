@@ -19,7 +19,6 @@ angular.module('app')
         }
 
         function updateTotal(dataModel) {
-            debugger;
             var mainSum = 0,
                 subSum = 0;
             for (var i = 0; i < dataModel.length; i++) {
